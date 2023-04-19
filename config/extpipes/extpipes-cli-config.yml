@@ -2,18 +2,17 @@
 # follows the same parameter structure as the DB extractor configuration
 cognite: # kwargs to pass to the CogniteClient, Environment variable format: ${ENVIRONMENT_VARIABLE}
   # host: https://${EXTPIPES_CDF_CLUSTER}.cognitedata.com/
-    host: https://westeurope-1.cognitedata.com
-    project: cdf-bootcamp-51-test
+    host: ${EXTPIPES_CDF_HOST}
+    project: ${EXTPIPES_CDF_PROJECT}
   #
   # AAD IdP login credentials:
   #
     idp-authentication:
-        #client-name: extpipes-cli
-        client-id: 5a97a093-c5c6-4351-a67a-4159ee51379a
-        secret: dW28Q~BR3SkvFmQXlTBel3kmQ5bYA6xJHPWdNc.E
+        client-id: ${EXTPIPES_IDP_CLIENT_ID}
+        secret: ${EXTPIPES_IDP_CLIENT_SECRET}
         scopes:
-            - https://westeurope-1.cognitedata.com/.default
-        token_url: https://login.microsoftonline.com/16e3985b-ebe8-4e24-9da4-933e21a9fc81/oauth2/v2.0/token
+            - ${EXTPIPES_IDP_SCOPES}
+        token_url: ${EXTPIPES_IDP_TOKEN_URL}
 
 logger:
     file:
