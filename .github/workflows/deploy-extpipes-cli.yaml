@@ -41,7 +41,7 @@ jobs:
                   EXTPIPES_IDP_CLIENT_ID: ${{ secrets.CLIENT_ID }}
                   EXTPIPES_IDP_CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
                   EXTPIPES_CDF_HOST: ${{ env.CDF_HOST }}
-                  EXTPIPES_CDF_PROJECT: cdf-bootcamp-51-prod
+                  EXTPIPES_CDF_PROJECT: ${{ matrix.CDF_PROJECT }}
                   EXTPIPES_IDP_TOKEN_URL: https://login.microsoftonline.com/${{ matrix.IDP_TENANT }}/oauth2/v2.0/token
                   EXTPIPES_IDP_SCOPES: ${{ env.CDF_HOST }}.default
 
