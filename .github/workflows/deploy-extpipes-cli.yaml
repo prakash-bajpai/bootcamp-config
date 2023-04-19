@@ -5,7 +5,6 @@ on:
     push:
         branches:
             - main
-            # - none
 
 jobs:
     deploy_extpipes:
@@ -49,4 +48,4 @@ jobs:
                   # Path to extpipes cli configuration file
                   config_file: ./config/extpipes/extpipes-cli-config.yml
             # "yes"|"no" deploy with special groups and aad_mappings
-            # with_special_groups: "yes"
+
