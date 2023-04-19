@@ -5,7 +5,6 @@ cognite: # kwargs to pass to the CogniteClient, Environment variable format: ${E
     host: ${EXTPIPES_CDF_HOST}
     project: ${EXTPIPES_CDF_PROJECT}
   #
-  # AAD IdP login credentials:
   #
     idp-authentication:
         client-id: ${EXTPIPES_IDP_CLIENT_ID}
